@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import javax.servlet.ServletContext;
 
 @Configuration
-@ComponentScan("com.moecode.mvc")
+@ComponentScan(basePackages = {"com.moecode.mvc", "com.moecode.service"})
 @EnableWebMvc
 public class AppConfig {
 
