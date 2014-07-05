@@ -15,7 +15,7 @@ public class SimpleShortyService implements ShortyService {
     @Override
     public Shorty getShortyByUrl(String url) {
         Shorty s = new Shorty();
-        s.setId(Long.toString(index));
+        s.setId(Long.toString(++index));
         s.setUrl(url);
 
         store.put(s.getId(), s);
@@ -25,6 +25,6 @@ public class SimpleShortyService implements ShortyService {
 
     @Override
     public Shorty getShortyById(String id) {
-        return null;
+        return store.get(id);
     }
 }

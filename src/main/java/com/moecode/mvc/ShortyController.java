@@ -5,6 +5,9 @@ import com.moecode.service.ShortyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 @RestController
 public class ShortyController {
 
@@ -17,8 +20,13 @@ public class ShortyController {
     }
 
     @RequestMapping(value= "/s/{id}")
-    public String getShorty(@RequestParam String id) {
+    public void getShorty(@PathVariable String id, HttpServletResponse response) throws IOException {
         Shorty s = shortyService.getShortyById(id);
-        return "redirect: " + s.getUrl();
+
+        if (s == null) {
+            response.sendRedirect("/resources/nope.html");
+        } else {
+            response.sendRedirect(s.getUrl());
+        }
     }
 }

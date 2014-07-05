@@ -3,8 +3,12 @@
 	<h1>Rotten</h1>
     <p>This is a sample web app implementing both a url shortener and a pastebin. It's rotten.
     </p>
+    <h2>Shorty</h2>
     <p><input id="url" type="text" name="url"><input id="shorten-button" type="submit" value="Shorten"></p>
     <div id="newurl"></div>
+    <h2>Elmer</h2>
+    <p><textarea id="elmertext"></textarea></p>
+
     <h2>API Design</h2>
     <p>GET /s/{id}</p>
     <p>retrieves a shorten URL, redirects to actual URL</p>
@@ -30,8 +34,7 @@
                     console.log("response received");
                     console.log(data);
 
-                    var newUrl = "http://localhost:8080/s/" + data.id;
-
+                    var newUrl = window.location.href + "s/" + data.id;
 
                     $("#newurl").html("shorty url: ").append("<a href=\"" + newUrl + "\">" + newUrl + "</a>");
                 });
