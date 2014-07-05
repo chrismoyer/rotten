@@ -4,5 +4,6 @@ import com.moecode.model.Shorty;
 
 public interface ShortyService {
 
-    public Shorty getShorty(String url);
+    public Shorty getShortyByUrl(String url);
+    public Shorty getShortyById(String id);
 }

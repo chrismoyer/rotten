@@ -2,15 +2,15 @@ package com.moecode.model;
 
 public class Shorty {
 
-    private String shorty;
+    private String id;
     private String url;
 
-    public String getShorty() {
-        return shorty;
+    public String getId() {
+        return id;
     }
 
-    public void setShorty(String shorty) {
-        this.shorty = shorty;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getUrl() {

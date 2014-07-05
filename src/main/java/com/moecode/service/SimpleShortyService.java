@@ -13,13 +13,18 @@ public class SimpleShortyService implements ShortyService {
     private long index = 0;
 
     @Override
-    public Shorty getShorty(String url) {
+    public Shorty getShortyByUrl(String url) {
         Shorty s = new Shorty();
-        s.setShorty(Long.toString(index));
+        s.setId(Long.toString(index));
         s.setUrl(url);
 
-        store.put(s.getShorty(), s);
+        store.put(s.getId(), s);
 
         return s;
+    }
+
+    @Override
+    public Shorty getShortyById(String id) {
+        return null;
     }
 }
