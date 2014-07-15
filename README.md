@@ -1,4 +1,4 @@
 rotten
 ======
 
-Rotten is rotten.
+Yes. Rotten is rotten.
