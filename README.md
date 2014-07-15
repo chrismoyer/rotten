@@ -1,5 +1,6 @@
 rotten
 ======
+fun
 
 	 No. Yes. Rotten is rotten.
 
